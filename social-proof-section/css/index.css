@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("../images/bg-pattern-top-desktop.svg"),
+    url("../images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+}
+
+.card {
+  @apply bg-magenta px-9 py-12 rounded-lg;
+}
+
+.card__header {
+  @apply flex items-center gap-x-6 mb-5;
+}
+
+.card__img {
+  @apply rounded-full w-12;
+}
+
+.card__text {
+  @apply text-l-grayish-magenta text-lg;
+}
+
+.card__heading {
+  @apply text-l-grayish-magenta font-medium;
+}
+
+.card__subheading {
+  @apply text-soft-pink font-normal;
+}
+
+.rating {
+  @apply flex bg-l-grayish-magenta lg:py-5 lg:px-4 py-4 lg:pl-10 rounded-lg gap-3 items-center lg:flex-row flex-col;
+}
+
+.rating-text {
+  @apply lg:ml-7 text-magenta font-bold lg:text-base text-lg;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 992px) {
+  body {
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+      url("../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+  }
+}
