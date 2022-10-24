@@ -1,0 +1,223 @@
+:root {
+  --orange: hsl(35, 77%, 62%);
+  --red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --dark-blue: hsl(240, 100%, 5%);
+}
+
+@font-face {
+  font-family: InterRegular;
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url("../assets/fonts/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: InterExtraBold;
+  src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-family: "InterRegular";
+  background-color: var(--off-white);
+}
+
+.nav-link {
+  color: var(--dark-grayish-blue);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--red);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  box-shadow: none;
+}
+
+main {
+  grid-gap: 1.85rem;
+  grid-template-areas: "image image aside" "content content aside" "footer footer footer";
+}
+
+.img {
+  grid-area: image;
+}
+
+aside {
+  grid-area: aside;
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul div {
+  border-bottom: 1px solid var(--grayish-blue);
+}
+
+ul div:last-of-type {
+  border-bottom: none;
+}
+
+aside a {
+  text-decoration: none;
+}
+
+.aside__heading:hover {
+  color: var(--orange);
+}
+
+.aside__heading {
+  font-family: InterExtraBold;
+  color: var(--off-white);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.aside__subheading {
+  font-family: InterRegular;
+  color: var(--grayish-blue);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+h1 {
+  color: var(--orange);
+  font-size: 3rem;
+  font-family: InterBold;
+}
+
+h2 {
+  font-family: InterExtraBold;
+  color: var(--dark-blue);
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: InterRegular;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--dark-grayish-blue);
+  font-size: 1.05rem;
+}
+
+.btn-primary {
+  background-color: var(--red);
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  justify-content: start;
+  font-family: InterBold;
+  letter-spacing: 4px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: var(--dark-blue);
+}
+
+section {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+}
+
+h4 {
+  font-size: 2.5rem;
+  color: var(--grayish-blue);
+  font-family: InterBold;
+}
+
+h5 {
+  font-family: InterExtraBold;
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+h5:hover {
+  color: var(--red);
+}
+
+h6 {
+  font-family: InterRegular;
+  color: var(--dark-grayish-blue);
+  font-size: 1.025rem;
+  line-height: 1.7;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.btn-close {
+  opacity: 1;
+  width: 2rem;
+  height: 2rem;
+}
+
+.offcanvas-body {
+  padding: 2rem;
+}
+
+@media (max-width: 993px) {
+  main {
+    grid-template-areas: "image" "content" "aside" "footer";
+    grid-gap: 2.5rem;
+  }
+
+  h4 {
+    font-size: 3.25rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    grid-gap: 1.75rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1.025rem;
+  }
+}
