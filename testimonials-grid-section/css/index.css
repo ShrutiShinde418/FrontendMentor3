@@ -23,6 +23,10 @@
   @apply opacity-50 text-sm;
 }
 
+main {
+  max-width: 100%;
+}
+
 @media (max-width: 410px) {
   img[alt="quotation"] {
     left: 6rem;
